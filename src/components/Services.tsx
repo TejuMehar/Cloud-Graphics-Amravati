@@ -10,9 +10,9 @@ const Services: React.FC = () => {
       icon: Layers,
       color: 'from-blue-500 to-green-500',
       services: [
-        { name: 'Color Palette', level: 95 },
-        { name: 'Typography', level: 90 },
-        { name: 'Visual Style', level: 85 }
+        { name: 'Logo Design', level: 95 },
+        { name: 'Stationery Design', level: 90 },
+        { name: 'Social Media Branding', level: 85 }
       ]
     },
     {
@@ -158,32 +158,6 @@ const Services: React.FC = () => {
           </div>
 
           {/* Design Tools */}
-          <motion.div
-            variants={itemVariants}
-            className="bg-gradient-to-r from-blue-50 to-pink-100 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-8"
-          >
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Tools We Use
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Our design workflow is powered by industry-standard software.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-              {['Adobe Photoshop', 'Illustrator', 'Figma', 'Canva', 'InDesign', 'CorelDRAW'].map(tool => (
-                <motion.div
-                  key={tool}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all duration-300"
-                >
-                  <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                    {tool}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

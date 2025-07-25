@@ -17,6 +17,7 @@
     "@tsparticles/react": "^3.0.0",
     "aos": "^3.0.0-beta.6",
     "emailjs": "^4.0.3",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.23.6",
     "localforage": "^1.10.0",
     "lottie-react": "^2.4.0",

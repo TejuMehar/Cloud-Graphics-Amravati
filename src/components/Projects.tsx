@@ -5,10 +5,12 @@ import design1 from '../assets/design1.jpg';
 import design2 from '../assets/design2.jpg';
 import design3 from '../assets/design3.jpg';
 import design4 from '../assets/design4.jpg';
+import design5 from '../assets/design5.jpg';
+import design6 from '../assets/design6.jpg';
 
 const Projects: React.FC = () => {
   
-const images = [design2, design3, design4];
+const images = [design1,design2, design3, design4,design5,design6];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -72,7 +74,7 @@ const images = [design2, design3, design4];
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://github.com/TejuMehar?tab=repositories"
+              href="https://www.instagram.com/cloud_graphics27/profilecard/?igsh=MXh2Njdkb3BpYm54OA=="
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 text-sm sm:text-base"

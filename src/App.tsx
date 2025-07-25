@@ -218,7 +218,7 @@ function App() {
    
   
     <p className="text-gray-600 dark:text-gray-400 text-sm">
-      © 2025 Cloud Graphics. Crafted with passion and attention to detail.
+      © 2024 Cloud Graphics. Crafted with passion and attention to detail.
     </p>
    
     <p className="text-gray-600 dark:text-gray-400 text-sm">

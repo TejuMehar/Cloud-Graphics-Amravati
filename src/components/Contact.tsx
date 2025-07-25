@@ -5,9 +5,9 @@ import { Instagram, Facebook, MessageCircleMore } from 'lucide-react';
 import emailjs from 'emailjs-com';
 
 
-const SERVICE_ID = 'your_service_id';
-const TEMPLATE_ID = 'your_template_id';
-const USER_ID = 'your_user_id';
+const SERVICE_ID = 'service_1re3inc';
+const TEMPLATE_ID = 'template_1tl9n6d';
+const USER_ID = 'HWq-2XDi3XcgqyK7v';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -27,18 +27,23 @@ const Contact: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
+  setIsSubmitting(true);
+  setSubmitStatus('idle');
 
-    // Simulated delay
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+  try {
+    await emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID);
+    setSubmitStatus('success');
+    setFormData({ name: '', email: '', subject: '', message: '' });
+  } catch (error) {
+    console.error('EmailJS Error:', error);
+    setSubmitStatus('error');
+  } finally {
+    setIsSubmitting(false);
+    setTimeout(() => setSubmitStatus('idle'), 3000);
+  }
+};
 
-      setTimeout(() => setSubmitStatus('idle'), 3000);
-    }, 2000);
-  };
 
   const contactInfo = [
     {
@@ -56,7 +61,7 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Shivaji Chowk, Akoli Rd,Sai Nagar, Amravati, Maharashtra 444607',
+      value: 'Shivaji Square, Near Sauji Dhabha Akoli Rd,Sai Nagar, Amravati, Maharashtra 444607',
       href: '#'
     }
   ];
